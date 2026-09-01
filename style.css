@@ -6,13 +6,12 @@ body{
 table, td, th{
     border: 1px solid black;
     border-collapse: collapse; /*en tabellinje istället för flera*/
-    padding: 0.5rem;
+    padding: 0.5rem; /*Skapar lite utrymme i cellerna*/
 }
 table{
     width: 80%; /* %storlek av webbläsarfönstret */
     table-layout: fixed; /*Gör kolumnerna jämnstora*/
 }
-
 tbody tr:nth-child(odd){
     background-color: gainsboro;
 }
@@ -29,4 +28,15 @@ caption{
     font-weight: bold;
     padding: 1rem; /*Jag tänkte att rem är mer lämplig än % här*/
 }
-
+/*Marginaljusteringar*/
+th:first-of-type, td:first-of-type{
+    text-align: left;
+}
+    /*Tar mittenkolumnerna 2 och 3*/
+th:nth-child(2), td:nth-child(2), th:nth-child(3), td:nth-child(3){ 
+    text-align: center;
+}
+    /*Sista kolumnen*/
+th:nth-child(4), td:nth-child(4){
+    text-align: right;
+}
